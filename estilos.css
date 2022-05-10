@@ -1,0 +1,14 @@
+.logo{
+    height: 50px;
+}
+
+.listadonavbar{
+    color: white;
+}
+.fondo{
+    background: url(resources/fondo.png);
+}
+body{
+    background-image: url(resources/fondo.png);
+    background-repeat: none;
+}
