@@ -3,12 +3,16 @@
 }
 
 .listadonavbar{
-    color: white;
+    color: #37b985;
 }
-.fondo{
-    background: url(resources/fondo.png);
+.fondoIndex{
+    background: url(resources/fondoIndex.png);
 }
-body{
-    background-image: url(resources/fondo.png);
-    background-repeat: none;
+
+.fondoTeoria{
+    background: url(resources/teoriaFondo.jpg);
+}
+.imagenPianoVector{
+    height: 200px;
+    
 }
