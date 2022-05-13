@@ -1,18 +1,33 @@
-.logo{
+.logo {
     height: 50px;
 }
 
-.listadonavbar{
+.listadonavbar {
     color: #37b985;
 }
-.fondoIndex{
+
+.fondoIndex {
     background: url(resources/fondoIndex.png);
+
 }
 
-.fondoTeoria{
+.fondoTeoria {
     background: url(resources/teoriaFondo.jpg);
+
 }
-.imagenPianoVector{
+
+.imagenPianoVector {
     height: 200px;
-    
+
+}
+
+.especialCard {
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .4;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
