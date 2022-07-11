@@ -93,7 +93,7 @@
               <label for="">Ingresa tu edad:</label>
             </div>
             <div class="col-12">
-              <input type="text" class="form-control" placeholder="Juan Gonzalez" aria-label="Username"
+              <input type="text" class="form-control" placeholder="30" aria-label="Username"
                 aria-describedby="basic-addon1" id="edadForm">
                 <p class="text-danger text-center" style="display: none;" id="edadFormError">campo invalido</p>
             </div>
@@ -105,7 +105,7 @@
               <label for="">Ingresa tu Direccion:</label>
             </div>
             <div class="col-12">
-              <input type="text" class="form-control" placeholder="Juan Gonzalez" aria-label="Username"
+              <input type="text" class="form-control" placeholder="av. españa #2332" aria-label="Username"
                 aria-describedby="basic-addon1" id="direccionForm">
                 <p class="text-danger text-center" style="display: none;" id="direccionFormError">campo invalido</p>
             </div>
@@ -135,54 +135,11 @@
       </div>
     </div>
     <script>
-      function validarDatos() {
-        nombre = document.getElementById("nombreForm").value
-        apellido = document.getElementById("apellidoForm").value
-        edad = document.getElementById("edadForm").value
-        direccion = document.getElementById("direccionForm").value
-        //otroDato = prompt("ingrese cualquier cosa")
-        //console.log("nombre: "+nombre+"\n apellido: "+apellido+ "\n edad: "+edad+ "\n direccion: "+direccion+"\n otro dato: "+otroDato)
-        if (nombre=="") {
-          document.getElementById("nombreFormError").style.display="block"
-          validarNombre=false
-        }else{
-          document.getElementById("nombreFormError").style.display="none"
-          validarNombre=true
-        }
-
-        if (apellido=="") {
-          document.getElementById("apellidoFormError").style.display="block"
-          validarApellido=false
-        }else{
-          document.getElementById("apellidoFormError").style.display="none"
-          validarApellido=true
-        }
-        if (direccion=="") {
-          document.getElementById("direccionFormError").style.display="block"
-          validarDireccion=false
-        }else{
-          document.getElementById("direccionFormError").style.display="none"
-          validarDireccion=true
-        }
-
-        if (edad<18) {
-          document.getElementById("edadFormError").style.display="block"
-          validarEdad=false
-        }else{
-          document.getElementById("edadFormError").style.display="none"
-          validarEdad=true
-        }
-        if(validarNombre&validarApellido&validarDireccion&validarEdad==true){
-          alert("datos enviados con exito")
-        }else{
-          alert("faltan datos") 
-        }
-        
-      }
+      
     </script>
 
     <!-- Button trigger modal -->
-    <p class="display-4 text-center text-info font-weight-bold">O bien buscanos en:</p>
+    <p class="display-4 text-center text-info font-weight-bold">O bien dirigete a:</p>
     <div class="row">
       <div class="col-xl-3 col-md-3 col-sm-12">
 
@@ -190,9 +147,8 @@
       <div class="row text-align-center">
         <div class="col-xl-6 col-md-6 col-sm-12 text-center">
 
-          <button type="button" class="btn btn-success text-center contacto" data-toggle="modal"
-            data-target="#exampleModal">
-            Contactanos
+          <button type="button" class="btn btn-success text-center contacto" data-toggle="modal" id="mapa" onclick="abrirMapa()">
+            abrir mapa
           </button>
         </div>
       </div>
@@ -218,67 +174,18 @@
       <p class="text-center text-dark">© 2021 Company, Inc</p>
     </footer>
 
-
-
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Codigo</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Ciudad</th>
-                  <th scope="col">Direccion</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
   </div>
   </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>-->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
@@ -286,5 +193,6 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="resources/scripts/script.js"></script>
 </html>
